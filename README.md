@@ -17,31 +17,39 @@ The disease can develop in areas with high relative humidity (86−100%) and tem
 
 For infection to occur, the leaves must be wet for 8−24 hours.
 
-The fungus can survive in the seed for more than four years and can spread from plant to plant through air. Major sources of brown spot in the field include
+The fungus can survive in the seed for more than four years and can spread from plant to plant through air. Major sources of brown spots in the field include
 
-1. Infected seed, which give rise to infected seedlings.
+1. Infected seed, which gives rise to infected seedlings.
 2. Volunteer rice.
 3. Infected rice debris.
 4. Weeds.
 
-Brown spot can occur at all crop stages, but the infection is most critical during maximum tillering up to the ripening stages of the crop. It also causes both quantity and quality losses.
+Brown spots can occur at all crop stages, but the infection is most critical during maximum tillering up to the ripening stages of the crop. It also causes both quantity and quality losses.
 
-On average, the disease causes 5% yield loss across all lowland rice production in South and Southeast Asia. Severely infected field can have as high as 45% yield loss.
+On average, the disease causes a 5% yield loss across all lowland rice production in South and Southeast Asia. Severely infected fields can have as high as 45% yield loss.
 
-Heavily infected seeds cause seedling blight and lead to 10−58% seedling mortality. It also affects the quality and the number of grains per panicle, and reduces the kernel weight.
+Heavily infected seeds cause seedling blight and lead to 10−58% seedling mortality. It also affects the quality and the number of grains per panicle and reduces the kernel weight.
 
-In terms of history, Brown spot was considered to be the major factor contributing to the Great Bengal Famin 1943.
+In terms of history, the Brown Spot was considered to be the major factor contributing to the Great Bengal Famine of 1943.
 
 ### Leaf Smut:- 
 Leaf smut in rice, caused by the fungus Entyloma oryzae, is a disease that primarily affects the leaves of rice plants, resulting in small, black smut sori, or fungal fruiting bodies, appearing as scattered or aggregated black spots. These infected areas around the sori often turn yellow, reducing the leaf's overall green area, which in turn diminishes the plant's photosynthetic capacity and can lead to premature leaf death.
 
 The disease thrives in high humidity, warm temperatures, and densely planted fields with poor air circulation. The fungus enters the plant through natural openings or wounds, producing spores that spread to other plants via wind, water, or mechanical means.
 
-Effective management of leaf smut includes planting resistant rice varieties, implementing proper cultural practices such as balanced fertilization and adequate spacing, and using fungicides judiciously as part of an integrated pest management approach. While the economic impact of leaf smut is generally less severe compared to other rice diseases, it can still cause significant yield losses if not properly managed, particularly in susceptible rice varieties and under favourable conditions for the fungus.
+Effective management of leaf smut includes planting resistant rice varieties, implementing proper cultural practices such as balanced fertilization and adequate spacing, and using fungicides judiciously as part of an integrated pest management approach. While the economic impact of leaf smut is generally less severe compared to other rice diseases, it can still cause significant yield losses if not properly managed, particularly in susceptible rice varieties and under favorable conditions for the fungus.
 
 
 ### Overall Analysis
 Each disease has distinct symptoms and impacts on rice plants, affecting their growth, photosynthesis, and overall yield. Effective disease management strategies include using disease-resistant rice varieties, implementing proper field hygiene practices, and avoiding conditions that promote disease spread. Early detection and prompt intervention are crucial to minimizing the economic and agronomic losses caused by these diseases. The classification model developed in this project will contribute to early disease detection and timely management, helping to ensure healthier rice crops and higher yields. Remember that accurate disease diagnosis requires the expertise of plant pathologists. This analysis serves as a general overview, and specific diagnosis should involve consultation with experts in the field.
 
+## Results from the Analysis
+- We started our model building by custom convolutional neural network from scratch through **Tensorflow-keras module**, but as our dataset was very small, getting an acceptable and satisfactory accuracy score was difficult through our normal CNN models. Tuning various hyperparameters and using different custom CNN architectures didn't yield us a good result.
+- **Transfer learning** was carried out following the failure of **custom CNN** models. these models are pre-trained on large datasets such as **Imagenet**. Knowledge gained from huge datasets helps the transfer-learned models to give us good results for our new dataset with very few data samples.
+- **Resnet50**, **InceptionV3**, **Xception**, and **EfficientNet** Transfer learning models were used for our project.
+- The **Xception** model performed better compared to the other transfer learning models. It gave us an accuracy score of **0.997** for the Non-augmented training sets and a validation accuracy of **0.4** for the Non-augmented test set.
+- When the **Xception** model was subjected to an Augmented training dataset it got an accuracy score of **0.997** and a validation accuracy score of **0.7** for the test set (Non-augmented) which was highest of any models trained so far in our dataset. 
+- But still, we can see that overfitting is in action throughout our model learning noise, rather than the underlying pattern in our dataset. This will be eliminated if we introduce more training samples for our model to learn from and generalize better to unseen data.
+
 ## Suggestions from you
-Feel free to give us any suggestions regarding improvisation /corrections of our code or any mistakes/procedures done incorrectly in our project notebook. We are in the path of learning and understanding the concept of Machine learning, so any feedback regarding this topic from any of you who worked in these type of projects is beneficial to us in correcting our mistakes and implementing the recorrected procedures to our project.
+Feel free to give us any suggestions regarding improvisation /corrections of our code or any mistakes/procedures done incorrectly in our project notebook. We are on the path of learning and understanding the concept of Machine learning, so any feedback regarding this topic from any of you who worked on these types of projects is beneficial to us in correcting our mistakes and implementing the recorrected procedures to our project.
