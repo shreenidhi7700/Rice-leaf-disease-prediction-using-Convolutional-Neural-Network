@@ -45,7 +45,7 @@ Each disease has distinct symptoms and impacts on rice plants, affecting their g
 
 ## Results from the Analysis
 - We started our model building by custom convolutional neural network from scratch through **Tensorflow-keras module**, but as our dataset was very small, getting an acceptable and satisfactory accuracy score was difficult through our normal CNN models. Tuning various hyperparameters and using different custom CNN architectures didn't yield us a good result.
-- **Transfer learning** was carried out following the failure of **custom CNN** models. these models are pre-trained on large datasets such as **Imagenet**. Knowledge gained from huge datasets helps the transfer-learned models to give us good results for our new dataset with very few data samples.
+- **Transfer learning** was carried out following the failure of **custom CNN** models. these models are pre-trained on large datasets such as **Imagenet**. Knowledge gained from huge datasets helps the transfer-learning models to give us good results for our new dataset with very few data samples.
 - **Resnet50**, **InceptionV3**, **Xception**, and **EfficientNet** Transfer learning models were used for our project.
 - The **Xception** model performed better compared to the other transfer learning models. It gave us an accuracy score of **0.997** for the Non-augmented training sets and a validation accuracy of **0.4** for the Non-augmented test set.
 - When the **Xception** model was subjected to an Augmented training dataset it got an accuracy score of **0.997** and a validation accuracy score of **0.7** for the test set (Non-augmented) which was highest of any models trained so far in our dataset. 
